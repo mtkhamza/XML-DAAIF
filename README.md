@@ -16,7 +16,7 @@ count(//country[encompassed[@continent="africa"]])
 ```
 //sea[name='Atlantic Ocean']/@country
 ```
-5) Combien du musulman en Europe ?
+5) Combien des musulmans en Europe ?
 ```
 sum(//country[encompassed[@continent='europe']]/(religion[.='Muslim']/@percentage  div 100 * population[last()] * encompassed[@continent='europe']/@percentage  div 100))
 
@@ -26,13 +26,13 @@ sum(//country[encompassed[@continent='europe']]/(religion[.='Muslim']/@percentag
 //country[count(encompassed) > 1]
 //country[count(encompassed) > 1]/name
 ```
-7) Quel sont les pays limitrophes de l'allemand?
+7) Quels sont les pays limitrophes de l'allemand?
 ```
 //country[border[@country="D"]]/name
 ```
 8) Quel est le pays dont la population est plus dense ?
 ```
-//country[ (population[last()] div @area)=max(//country/(population[last()] div @area )) ]/name
+//country[ (population[last()] div @area) = max(//country/(population[last()] div @area )) ]/name
 ```
 
 # mondial.xml file corrected
